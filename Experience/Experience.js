@@ -16,18 +16,20 @@ export default class Experience {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
+    // geometry
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0xffc0cb });
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
     camera.position.z = 5;
 
+    //animation
     function animate() {
       requestAnimationFrame(animate);
 
-      cube.rotation.x += 0.04;
-      cube.rotation.y += 0.01;
+      cube.rotation.x += 0.004;
+      cube.rotation.y += 0.004;
 
       renderer.render(scene, camera);
     }
