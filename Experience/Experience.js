@@ -17,7 +17,7 @@ export default class Experience {
     document.body.appendChild(renderer.domElement);
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const material = new THREE.MeshBasicMaterial({ color: 0xffc0cb });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
@@ -26,7 +26,7 @@ export default class Experience {
     function animate() {
       requestAnimationFrame(animate);
 
-      cube.rotation.x += 0.01;
+      cube.rotation.x += 0.0;
       cube.rotation.y += 0.01;
 
       renderer.render(scene, camera);
